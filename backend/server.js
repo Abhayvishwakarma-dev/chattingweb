@@ -79,7 +79,7 @@ app.use(errorMiddleware);
 const httpServer = createServer(app);
 
 // Setup Socket.IO
-const io = new Server(httpServer, {
+const io = new Server(httpServer, { 
   cors: {
     origin: process.env.CLIENT_URL || "http://localhost:5173",
     credentials: true,
